@@ -44,12 +44,13 @@ ul li {
 	text-align: left;
 	font-size: 15px;
 }
-.season-one, .season-two, .season-three {
+.search-results {
 	border: 1px solid black;
 	width: 33%;
 	display: inline-block;
 	background-color: white;
 	opacity: 0.6;
+	display: none;
 }
 .unsplash p {
 	float: right;
