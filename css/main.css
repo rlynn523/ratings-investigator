@@ -4,6 +4,12 @@ html {
 *, *:before, *:after {
  	box-sizing: inherit;
 }
+body {
+	background-image: url("https://images.unsplash.com/photo-1438109519352-a52c41243c1a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=08f156a8735072ae58c13c679194297c");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
 .title p {
 	text-align: center;
 	font-family: 'Megrim', cursive;
@@ -25,4 +31,27 @@ html {
 }
 .series-plot p {
 	margin-top: 10px;
+	margin-bottom: 2em;
 }
+ul {
+	list-style: none;
+	padding-left: 10px;
+}
+ul p {
+	text-align: center;
+}
+ul li {
+	text-align: left;
+	font-size: 15px;
+}
+.season-one, .season-two, .season-three {
+	border: 1px solid black;
+	width: 33%;
+	display: inline-block;
+	background-color: white;
+	opacity: 0.6;
+}
+.unsplash p {
+	float: right;
+	margin-right: 10px;
+} 
