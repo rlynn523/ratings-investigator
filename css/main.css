@@ -4,12 +4,25 @@ html {
 *, *:before, *:after {
  	box-sizing: inherit;
 }
-body h1 {
+.title p {
 	text-align: center;
+	font-family: 'Megrim', cursive;
+	font-size: 4em;
 }
 #search {
 	text-align: center;
 }
-#search-results p {
-	
+.series-title {
+	text-align: center;
+	font-size: 2em;
+}
+.series-title p {
+	margin-bottom: 0;
+}
+.series-plot {
+	text-align: center;
+	font-size: 1.5em;
+}
+.series-plot p {
+	margin-top: 10px;
 }
