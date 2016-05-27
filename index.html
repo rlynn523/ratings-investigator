@@ -10,6 +10,57 @@
 	<script src="js/app.js"></script>
 </head>
 <body>
+	<script>
+	$(function(){
+ 		var show = {
+		    season: [ 
+		      {
+		        Episode: 1,
+		        Title: "Winter Is Coming",
+		        imdbRating: 8.9
+		      },
+		      {
+		        Episode: 2,
+		        Title: "The Kingsroad",
+		        imdbRating: 8.7
+		      },
+		      {
+		        Episode: 3,
+		        Title: "Lord Snow",
+		        imdbRating: 8.6
+		      },
+		      {
+		        Episode: 1,
+		        Title: "The North Remembers",
+		        imdbRating: 8.7
+		      },
+		      {
+		        Episode: 2,
+		        Title: "The Night Lands",
+		        imdbRating: 8.4
+		      },
+		      {
+		        Episode: 3,
+		        Title: "What Is Dead May Never Die",
+		        imdbRating: 8.7
+		      }
+		    ]
+	  	}
+		$('#search').submit(function (event) {
+		    event.preventDefault();
+		    var searchTerm = $('#query').val();
+		    addResults();
+	  	})
+
+		var showSeasons = show.season;
+		function addResults() {
+	  		var showSeasons = show.season;
+	    	for(var i = 0; i < showSeasons.length; i++) {
+	      		$("#search-results").append('<p>' + 'Episode: ' + showSeasons[i].Episode + ' ' + 'Title: ' + showSeasons[i].Title  + ' ' + 'Rating: ' + showSeasons[i].imdbRating + '</p>');
+	    	}
+		}
+	});
+	</script>
 	<div class="title">
 		<p><strong>TV Ratings Investigator</strong></p>
 	</div>
@@ -26,48 +77,7 @@
 	<div id="search-results">
 		<div class="season-one">
 			<ul class="season-content">
-				<p><strong>Season 1</strong></p>
-				<li><strong>Episode 1:</strong> Winter Is Coming, Rating: 8.9</li>
-				<li><strong>Episode 2:</strong> The Kingsroad, Rating: 8.7</li>
-				<li><strong>Episode 3:</strong> Lord Snow, Rating: 8.6</li>
-				<li><strong>Episode 4:</strong> Cripples, Bastards, and Broken Things, Rating: 8.7</li>
-				<li><strong>Episode 5:</strong> The Wolf and the Lion, Rating: 9.0</li>
-				<li><strong>Episode 6:</strong> A Golden Crown, Rating: 9.1</li>
-				<li><strong>Episode 7:</strong> You Win or You Die, Rating: 9.2</li>
-				<li><strong>Episode 8:</strong> The Pointy End, Rating: 8.9</li>
-				<li><strong>Episode 9:</strong> Baelor, Rating: 9.5</li>
-				<li><strong>Episode 10:</strong> Fire and Blood, Rating: 9.4</li>
 			</ul>
-		</div>
-		<div class="season-two">
-			<ul class="season-content">
-					<p><strong>Season 2</strong></p>
-					<li><strong>Episode 1:</strong> The North Remembers, Rating: 8.7</li>
-					<li><strong>Episode 2:</strong> The Night Lands, Rating: 8.4</li>
-					<li><strong>Episode 3:</strong> What Is Dead May Never Die, Rating: 8.7</li>
-					<li><strong>Episode 4:</strong> Garden of Bones, Rating: 8.7</li>
-					<li><strong>Episode 5:</strong> The Ghost of Harrenhal, Rating: 8.7</li>
-					<li><strong>Episode 6:</strong> The Old Gods and the New, Rating: 9.0</li>
-					<li><strong>Episode 7:</strong> A Man Without Honor, Rating: 8.8</li>
-					<li><strong>Episode 8:</strong> The Prince of Winterfell, Rating: 8.7</li>
-					<li><strong>Episode 9:</strong> Blackwater, Rating: 9.6</li>
-					<li><strong>Episode 10:</strong> Valar Morghulis, Rating: 9.4</li>
-				</ul>
-		</div>
-		<div class="season-three">
-			<ul class="season-content">
-					<p><strong>Season 3</strong></p>
-					<li><strong>Episode 1:</strong> Valar Dohaeris, Rating: 8.7</li>
-					<li><strong>Episode 2:</strong> Dark Wings, Dark Words, Rating: 8.5</li>
-					<li><strong>Episode 3:</strong> Walk of Punishment, Rating: 8.8</li>
-					<li><strong>Episode 4:</strong> And Now His Watch Is Ended, Rating: 9.5</li>
-					<li><strong>Episode 5:</strong> Kissed by Fire, Rating: 8.9</li>
-					<li><strong>Episode 6:</strong> The Climb, Rating: 8.6</li>
-					<li><strong>Episode 7:</strong> The Bear and the Maiden Fair, Rating: 8.6</li>
-					<li><strong>Episode 8:</strong> Second Sons, Rating: 8.9</li>
-					<li><strong>Episode 9:</strong> The Rains of Castamere, Rating: 9.9</li>
-					<li><strong>Episode 10:</strong> Mhysa, Rating: 9.0</li>
-				</ul>
 		</div>
 	</div>
 	<div class="unsplash">
