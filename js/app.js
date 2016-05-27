@@ -5,7 +5,16 @@ $(function(){
     getRequest(searchTerm);
   });
 });
+
+
+function showResults(results){
+    $.each(results, function(data, value){
+      $('#search-results').append('<p>' + "Episode:" + " " + results.Episode + "," + " " + "Title:" + " " + results.Title + "," +  " " + "Rating:" + " " + results.imdbRating + '</p>');
+    })
+  }
+
 function getRequest(searchTerm){
+  // figure out a way to display all possible seasons
   var seasonNum = 1
   var params = {
     t: searchTerm,
@@ -17,8 +26,9 @@ function getRequest(searchTerm){
   url = 'http://www.omdbapi.com/?'
   $.getJSON(url, params, function(data){
     for (var i = 0; i < data.Episodes.length; i++){ 
-    var episode = data.Episodes[i]
-    console.log("Episode:" + " " + episode.Episode + "," + " " + "Title:" + " " + episode.Title + "," +  " " + "Rating:" + " " + episode.imdbRating);
+    var episode = data.Episodes[i];
+    showResults(episode);
     }
   });
+
 }
