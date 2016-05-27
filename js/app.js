@@ -6,10 +6,11 @@ $(function(){
   });
 });
 function getRequest(searchTerm){
+  var seasonNum = 1
   var params = {
     t: searchTerm,
     plot: 'short',
-    Season: '1',
+    Season: seasonNum,
     r: 'json'
   };
 
