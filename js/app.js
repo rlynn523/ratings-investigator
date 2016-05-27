@@ -1,34 +1,35 @@
 $(function(){
-  $('#search').submit(function(event){
+  $('#search').submit(function (event) {
     event.preventDefault();
     var searchTerm = $('#query').val();
     getRequest(searchTerm);
   });
 });
 
+var showResults = function (results) {
+  $('#search-results').append('<p>' + "Episode:" + " " + results.Episode + "," + " " + "Title:" + " " + results.Title + "," +  " " + "Rating:" + " " + results.imdbRating + '</p>');
+}
 
-function showResults(results){
-    $.each(results, function(data, value){
-      $('#search-results').append('<p>' + "Episode:" + " " + results.Episode + "," + " " + "Title:" + " " + results.Title + "," +  " " + "Rating:" + " " + results.imdbRating + '</p>');
-    })
-  }
+var getRequest = function (searchTerm) {
+  var params; 
+  var url = 'http://www.omdbapi.com/?';
+  var seasonNum = 3;
+  var hasData = true;
+  // while(hasData){
+    params = {
+      t: searchTerm,
+      plot: 'short',
+      Season: seasonNum,
+      r: 'json'
+    }; 
 
-function getRequest(searchTerm){
-  // figure out a way to display all possible seasons
-  var seasonNum = 1
-  var params = {
-    t: searchTerm,
-    plot: 'short',
-    Season: seasonNum,
-    r: 'json'
-  };
-
-  url = 'http://www.omdbapi.com/?'
-  $.getJSON(url, params, function(data){
-    for (var i = 0; i < data.Episodes.length; i++){ 
-    var episode = data.Episodes[i];
-    showResults(episode);
-    }
-  });
-
+    $.getJSON(url, params, function (data) {
+      console.log(data);
+      var episode 
+      for (var i = 0; i < data.Episodes.length; i++) { 
+        episode = data.Episodes[i];
+        showResults(episode);
+      }
+    });
+  // }
 }
