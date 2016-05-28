@@ -32,11 +32,22 @@ $(function(){
       	hasData = false
       	return;
       }
+      var seasonContent = $(".season-content").clone();
+      // 	// cloning the season-content div and storing in variable
+     	 seasonContent.find(".season-title").text("test");
       var episode 
       for (var i = 0; i < data.Episodes.length; i++) { 
         episode = data.Episodes[i];
-        showResults(episode);
-      }
+        // showResults(episode);
+        var episodeContent = $(".episode-content").clone();
+      // 	// cloning the season-content div and storing in variable
+     	 episodeContent.find(".episode-title").text(episode.Title);
+      // 	// changing the value of seasonContent
+      	seasonContent.append(episodeContent.html());
+      	// when you use .html(), you return only a string value
+      } 
+      $("#search-results").append(seasonContent.html());
+      // all the data, the final commit
     });
     seasonNum++;
   }

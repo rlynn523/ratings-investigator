@@ -10,57 +10,6 @@
 	<script src="js/app.js"></script>
 </head>
 <body>
-	<script>
-	$(function(){
- 		var show = {
-		    season: [ 
-		      {
-		        Episode: 1,
-		        Title: "Winter Is Coming",
-		        imdbRating: 8.9
-		      },
-		      {
-		        Episode: 2,
-		        Title: "The Kingsroad",
-		        imdbRating: 8.7
-		      },
-		      {
-		        Episode: 3,
-		        Title: "Lord Snow",
-		        imdbRating: 8.6
-		      },
-		      {
-		        Episode: 1,
-		        Title: "The North Remembers",
-		        imdbRating: 8.7
-		      },
-		      {
-		        Episode: 2,
-		        Title: "The Night Lands",
-		        imdbRating: 8.4
-		      },
-		      {
-		        Episode: 3,
-		        Title: "What Is Dead May Never Die",
-		        imdbRating: 8.7
-		      }
-		    ]
-	  	}
-		$('#search').submit(function (event) {
-		    event.preventDefault();
-		    var searchTerm = $('#query').val();
-		    addResults();
-	  	})
-
-		var showSeasons = show.season;
-		function addResults() {
-	  		var showSeasons = show.season;
-	    	for(var i = 0; i < showSeasons.length; i++) {
-	      		$("#search-results").append('<p>' + 'Episode: ' + showSeasons[i].Episode + ' ' + 'Title: ' + showSeasons[i].Title  + ' ' + 'Rating: ' + showSeasons[i].imdbRating + '</p>');
-	    	}
-		}
-	});
-	</script>
 	<div class="title">
 		<p><strong>TV Ratings Investigator</strong></p>
 	</div>
@@ -75,9 +24,11 @@
 		<p>Series Plot Here</p>
 	</div>
 	<div id="search-results">
-		<div class="season-one">
-			<ul class="season-content">
-			</ul>
+		<div class="season-content">
+			<p class="season-title"></p>
+			<div class="episode-content">
+				<p class="episode-title"></p>
+			</div>
 		</div>
 	</div>
 	<div class="unsplash">
