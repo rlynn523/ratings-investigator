@@ -44,7 +44,7 @@ ul li {
 	text-align: left;
 	font-size: 15px;
 }
-.search-results {
+#search-results {
 	border: 1px solid black;
 	width: 33%;
 	display: inline-block;
