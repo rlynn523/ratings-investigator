@@ -1,34 +1,43 @@
-// $(function(){
-//   $('#search').submit(function(event){
-//     event.preventDefault();
-//     var searchTerm = $('#query').val();
-//     getRequest(searchTerm);
-//   });
-// });
+var hasData = true;
+$(function(){
+  $('#search').submit(function(event){
+    event.preventDefault();
+    var searchTerm = $('#query').val();
+    getRequest(searchTerm);
+  });
+});
+  var showResults = function (results) {
+  $('#search-results').append('<p>' + "Episode:" + " " + results.Episode + "," + " " + "Title:" + " " + results.Title + "," +  " " + "Rating:" + " " + results.imdbRating + '</p>');
+  }
+  var getRequest = function (searchTerm) {
+    var params; 
+    var url = 'http://www.omdbapi.com/?';
+    var seasonNum = 1;
+    var maxSeason = 30;
+  $("#search-results").show();
+  // div is display: none in css, when user clicks submit, the div will show
+  while(hasData && seasonNum < maxSeason){
+  	// run the while loop until we reach maxSeason, or we have data
+    params = {
+      t: searchTerm,
+      plot: 'short',
+      Season: seasonNum,
+      r: 'json'
+    }; 
 
-//   var showResults = function (results) {
-//   $('#search-results').append('<p>' + "Episode:" + " " + results.Episode + "," + " " + "Title:" + " " + results.Title + "," +  " " + "Rating:" + " " + results.imdbRating + '</p>');
-//   }
-//   var getRequest = function (searchTerm) {
-//     var params; 
-//     var url = 'http://www.omdbapi.com/?';
-//     var seasonNum = 3;
-//     var hasData = true;
-//   // while(hasData){
-//     params = {
-//       t: searchTerm,
-//       plot: 'short',
-//       Season: seasonNum,
-//       r: 'json'
-//     }; 
-
-//     $.getJSON(url, params, function (data) {
-//       console.log(data);
-//       var episode 
-//       for (var i = 0; i < data.Episodes.length; i++) { 
-//         episode = data.Episodes[i];
-//         showResults(episode);
-//       }
-//     });
-//   // }
-// }
+    $.getJSON(url, params, function (data) {
+      if(data.Response == "False"){
+      	console.log(data.Response);
+      	// if data is null, then hasData will equal false, thus stopping the while loop.
+      	hasData = false
+      	return;
+      }
+      var episode 
+      for (var i = 0; i < data.Episodes.length; i++) { 
+        episode = data.Episodes[i];
+        showResults(episode);
+      }
+    });
+    seasonNum++;
+  }
+}
