@@ -18,10 +18,10 @@ body {
 #search {
 	text-align: center;
 }
-/*.series-title {
+.series-title {
 	text-align: center;
 	font-size: 2em;
-}*/
+}
 .series-title p {
 	margin-bottom: 0;
 }
