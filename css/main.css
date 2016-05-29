@@ -51,8 +51,18 @@ ul li {
 	background-color: white;
 	opacity: 0.6;
 	display: none;
+	margin: 0 auto;
+}
+.season-title {
+	font-weight: bold;
+	text-align: center;
+}
+.episode-title {
+	padding-left: 10px;
 }
 .unsplash p {
-	float: right;
 	margin-right: 10px;
+	position: fixed;
+    right: 0;
+    bottom: 0;
 } 
