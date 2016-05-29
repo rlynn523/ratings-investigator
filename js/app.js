@@ -18,26 +18,26 @@ var getRequest = function (searchTerm) {
   	// run the while loop until we reach maxSeason, or we have data
 	    params = {
 		    t: searchTerm,
-		    plot: 'short',
 		    Season: seasonNum,
+		    // in order to get the series plot and the overall series rating, this needs to be taken out
 		    r: 'json'
 	    }; 
 
 	    $.getJSON(url, params, function (data) {
-	    	console.log(data);
 	    	if(data.Response == "False"){
-	      	console.log(data.Response);
 	      	// if data is null, then hasData will equal false, thus stopping the while loop.
 	      	hasData = false
 	      	return;
 	      }
 
 	    $(".title").find(".series-title").text(data.Title);
-	      // 
-	    $(".plot").find(".series-plot").text(data.imdbRating);
+	      // places the text of the show title to the page
+	    // $(".plot").find(".series-plot").text(data.Plot);
     	var seasonContent = $(".season-content").clone();
-	    	// cloning the season-content div and storing in variable
-	    	seasonContent.find(".season-title").text("Season " + data.Season);
+	    // cloning the season-content div and storing in variable
+	    seasonContent.find(".season-title").text("Season " + data.Season);
+	    // this shows the correct season number
+	    // sometimes the order is not correct, ask Mario
 
 	    var episode 
 	    for (var i = 0; i < data.Episodes.length; i++) {
@@ -50,9 +50,12 @@ var getRequest = function (searchTerm) {
 	      	seasonContent.append(episodeContent.html());
 	      	// when you use .html(), you return only a string value
 			} 
-	      $("#search-results").append(seasonContent.html());
+
+	     $("#search-results").append(seasonContent.html());
 	      // all the data, the final commit
 	    });
+	    
 	    seasonNum++;
+	    // I want to have each div contain one separate "season" object
   	}
 }
