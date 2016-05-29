@@ -51,7 +51,7 @@ var getRequest = function (searchTerm) {
 	      	// when you use .html(), you return only a string value
 			} 
 
-	     $("#search-results").append(seasonContent.html());
+	     $("#search-results").append("<div class =" + data.Season + ">" + seasonContent.html() + "</div>");
 	      // all the data, the final commit
 	    });
 	    

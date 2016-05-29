@@ -47,11 +47,9 @@ ul li {
 #search-results {
 	border: 1px solid black;
 	width: 33%;
-	display: inline-block;
 	background-color: white;
 	opacity: 0.6;
-	display: none;
-	margin: 0 auto;
+	display: none
 }
 .season-title {
 	font-weight: bold;
