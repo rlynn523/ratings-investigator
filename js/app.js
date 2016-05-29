@@ -34,14 +34,15 @@ $(function(){
       }
       var seasonContent = $(".season-content").clone();
       // 	// cloning the season-content div and storing in variable
-     	 seasonContent.find(".season-title").text("test");
+     	 seasonContent.find(".season-title").text("Season " + data.Season);
       var episode 
-      for (var i = 0; i < data.Episodes.length; i++) { 
+      for (var i = 0; i < data.Episodes.length; i++) {
         episode = data.Episodes[i];
+        console.log(data); 
         // showResults(episode);
         var episodeContent = $(".episode-content").clone();
       // 	// cloning the season-content div and storing in variable
-     	 episodeContent.find(".episode-title").text(episode.Title);
+     	 episodeContent.find(".episode-title").text("Episode " + episode.Episode + ":" + " " + episode.Title + ", " + "Rating: " + episode.imdbRating);
       // 	// changing the value of seasonContent
       	seasonContent.append(episodeContent.html());
       	// when you use .html(), you return only a string value
