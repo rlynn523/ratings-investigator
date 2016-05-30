@@ -13,6 +13,8 @@ var getRequest = function (searchTerm) {
     var seasonNum = 1;
     var maxSeason = 30;
   $("#search-results").show();
+  $(".title").show();
+  $(".plot").show();
   // div is display: none in css, when user clicks submit, the div will show
   		params = {
 		    t: searchTerm,
@@ -21,7 +23,7 @@ var getRequest = function (searchTerm) {
 	    }; 
 
 	    $.getJSON(url, params, function (data) {
-	  		$(".series-rating").text(data.imdbRating); 
+	  		$(".series-rating").text("Series Rating: " + data.imdbRating); 
 	  		$(".series-plot").text(data.Plot); 	
 	   	})
   	while(hasData && seasonNum < maxSeason){

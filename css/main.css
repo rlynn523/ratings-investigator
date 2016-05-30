@@ -9,8 +9,9 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
+	font-family: 'Raleway', sans-serif;
 }
-.title p {
+.app-title p {
 	text-align: center;
 	font-family: 'Megrim', cursive;
 	font-size: 4em;
@@ -33,17 +34,7 @@ body {
 	margin-top: 10px;
 	margin-bottom: 2em;
 }
-ul {
-	list-style: none;
-	padding-left: 10px;
-}
-ul p {
-	text-align: center;
-}
-ul li {
-	text-align: left;
-	font-size: 15px;
-}
+
 #search-results {
 	width: 100%;
 	display: none;
@@ -52,14 +43,48 @@ ul li {
 	float: left;
 	border: 1px solid black;
 	background-color: white;
-	opacity: 0.6;
+	opacity: 0.8;
 	margin: 0 5%;
 	word-wrap: break-word;
 	overflow: scroll;
 	height: 300px;
 	width: 23.33%;
+	margin-top: 2em;
 }
-
+#search-results .seasons:hover {
+	background-color: gray;
+	transition: ease 700ms;
+}
+.title {
+	border: 1px solid black;
+	background-color: white;
+	opacity: 0.8;
+	word-wrap: break-word;
+	display: none;
+	margin-top: 4em;
+}
+.plot {
+	border: 1px solid black;
+	background-color: white;
+	opacity: 0.8;
+	word-wrap: break-word;
+	display: none;
+	margin-top: 0;
+	font-style: italic;
+	font-size: 12px;
+	padding: 0 10px;
+}
+.title .series-title {
+	font-size: 2.5em;
+	font-weight: 800;
+	margin-bottom: 0;
+}
+.title .series-rating {
+	text-align: center;
+	font-size: 2em;
+	font-weight: 700;
+	margin-top: 0;
+}
 .season-title {
 	font-weight: bold;
 	text-align: center;
@@ -75,4 +100,4 @@ ul li {
 	position: fixed;
     right: 0;
     bottom: 0;
-} 
+}
