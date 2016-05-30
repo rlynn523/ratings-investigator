@@ -45,14 +45,26 @@ ul li {
 	font-size: 15px;
 }
 #search-results {
+	width: 100%;
+	display: none;
+}
+#search-results .seasons {
+	float: left;
 	border: 1px solid black;
-	width: 33%;
 	background-color: white;
 	opacity: 0.6;
-	display: none
+	margin: 0 5%;
+	word-wrap: break-word;
+	overflow: scroll;
+	height: 300px;
+	width: 23.33%;
 }
+
 .season-title {
 	font-weight: bold;
+	text-align: center;
+}
+.season-title p {
 	text-align: center;
 }
 .episode-title {

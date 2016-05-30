@@ -14,6 +14,16 @@ var getRequest = function (searchTerm) {
     var maxSeason = 30;
   $("#search-results").show();
   // div is display: none in css, when user clicks submit, the div will show
+  		params = {
+		    t: searchTerm,
+		    // in order to get the series plot and the overall series rating, this needs to be taken out
+		    r: 'json'
+	    }; 
+
+	    $.getJSON(url, params, function (data) {
+	  		$(".series-rating").text(data.imdbRating); 
+	  		$(".series-plot").text(data.Plot); 	
+	   	})
   	while(hasData && seasonNum < maxSeason){
   	// run the while loop until we reach maxSeason, or we have data
 	    params = {
@@ -28,30 +38,30 @@ var getRequest = function (searchTerm) {
 	      	// if data is null, then hasData will equal false, thus stopping the while loop.
 	      	hasData = false
 	      	return;
-	      }
+	    	}
 
-	    $(".title").find(".series-title").text(data.Title);
-	      // places the text of the show title to the page
-	    // $(".plot").find(".series-plot").text(data.Plot);
-    	var seasonContent = $(".season-content").clone();
-	    // cloning the season-content div and storing in variable
-	    seasonContent.find(".season-title").text("Season " + data.Season);
-	    // this shows the correct season number
-	    // sometimes the order is not correct, ask Mario
+		    $(".title").find(".series-title").text(data.Title);
+		      // places the text of the show title to the page
+		    // $(".plot").find(".series-plot").text(data.Plot);
+	    	var seasonContent = $(".season-content").clone();
+		    // cloning the season-content div and storing in variable
+		    seasonContent.find(".season-title").text("Season " + data.Season);
+		    // this shows the correct season number
+		    // sometimes the order is not correct, ask Mario
+		    console.log(data);
+		    var episode 
+		    for (var i = 0; i < data.Episodes.length; i++) {
+		        episode = data.Episodes[i]; 
+		        // showResults(episode);
+		        var episodeContent = $(".episode-content").clone();
+		     	// cloning the season-content div and storing in variable
+		     	episodeContent.find(".episode-title").text("Episode " + episode.Episode + ":" + " " + episode.Title + ", " + "Rating: " + episode.imdbRating);
+		      	// changing the value of seasonContent
+		      	seasonContent.append(episodeContent.html());
+		      	// when you use .html(), you return only a string value
+				} 
 
-	    var episode 
-	    for (var i = 0; i < data.Episodes.length; i++) {
-	        episode = data.Episodes[i]; 
-	        // showResults(episode);
-	        var episodeContent = $(".episode-content").clone();
-	     	// cloning the season-content div and storing in variable
-	     	episodeContent.find(".episode-title").text("Episode " + episode.Episode + ":" + " " + episode.Title + ", " + "Rating: " + episode.imdbRating);
-	      	// changing the value of seasonContent
-	      	seasonContent.append(episodeContent.html());
-	      	// when you use .html(), you return only a string value
-			} 
-
-	     $("#search-results").append("<div class =" + data.Season + ">" + seasonContent.html() + "</div>");
+	     $("#search-results").append("<div class ='seasons'>" + seasonContent.html() + "</div>");
 	      // all the data, the final commit
 	    });
 	    
