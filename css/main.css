@@ -6,14 +6,27 @@ html {
 }
 body {
 	font-family: 'Raleway', sans-serif;
+	background-color: #1E88E5;
+}
+.app-title {
+	background-color: #0D47A1;
+	margin-top: 0;
+	padding: 1px 0;
 }
 .app-title p {
 	text-align: center;
 	font-family: 'Megrim', cursive;
 	font-size: 4em;
+	color: #FFFFFF;
+}
+.title {
+	opacity: 0.8;
+	word-wrap: break-word;
+	display: none;
 }
 #search {
 	text-align: center;
+	padding: 2em 0;
 }
 .series-title {
 	text-align: center;
@@ -21,6 +34,7 @@ body {
 }
 .series-title p {
 	margin-bottom: 0;
+	margin-top: 0;
 }
 .rating {
 	text-align: center;
@@ -47,31 +61,20 @@ body {
 }
 #search-results .seasons {
 	float: left;
-	border: 1px solid black;
-	background-color: white;
+	background-color: #9E9E9E;
 	opacity: 0.8;
-	margin: 0 5%;
 	word-wrap: break-word;
 	overflow: scroll;
 	height: 300px;
 	width: 23.33%;
-	margin-top: 2em;
+	margin: 2em 5%;
 }
 #search-results .seasons:hover {
-	background-color: gray;
+	background-color: #90A4AE;
 	transition: ease 700ms;
-}
-.title {
-	border: 1px solid black;
-	background-color: white;
-	opacity: 0.8;
-	word-wrap: break-word;
-	display: none;
-	margin-top: 4em;
 }
 .plot {
 	border: 1px solid black;
-	background-color: white;
 	opacity: 0.8;
 	word-wrap: break-word;
 	display: none;
