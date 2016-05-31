@@ -57,7 +57,7 @@ var getRequest = function (searchTerm) {
 		        // showResults(episode);
 		        var episodeContent = $(".episode-content").clone();
 		     	// cloning the season-content div and storing in variable
-		     	episodeContent.find(".episode-title").text("Episode " + episode.Episode + ":" + " " + episode.Title + ", " + "Rating: " + episode.imdbRating);
+		     	episodeContent.find(".episode-title").text("Episode " + episode.Episode + ":" + " " + episode.Title + ", " + episode.imdbRating);
 		      	// changing the value of seasonContent
 		      	seasonContent.append(episodeContent.html());
 		      	// when you use .html(), you return only a string value

@@ -5,10 +5,6 @@ html {
  	box-sizing: inherit;
 }
 body {
-	background-image: url("https://images.unsplash.com/photo-1438109519352-a52c41243c1a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=08f156a8735072ae58c13c679194297c");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
 	font-family: 'Raleway', sans-serif;
 }
 .app-title p {
@@ -26,6 +22,17 @@ body {
 .series-title p {
 	margin-bottom: 0;
 }
+.rating {
+	text-align: center;
+}
+.material-icons {
+	width: 24px;
+}
+.rating .series-rating {
+	font-size: 2em;
+	font-weight: 700;
+	display: inline-block;
+}
 .series-plot {
 	text-align: center;
 	font-size: 1.5em;
@@ -34,7 +41,6 @@ body {
 	margin-top: 10px;
 	margin-bottom: 2em;
 }
-
 #search-results {
 	width: 100%;
 	display: none;
@@ -78,12 +84,6 @@ body {
 	font-size: 2.5em;
 	font-weight: 800;
 	margin-bottom: 0;
-}
-.title .series-rating {
-	text-align: center;
-	font-size: 2em;
-	font-weight: 700;
-	margin-top: 0;
 }
 .season-title {
 	font-weight: bold;
