@@ -9,7 +9,7 @@ body {
 	background-color: #1E88E5;
 }
 
-/*Masthead Styling*/
+/* Masthead Styling */
 .app-title {
 	background-color: #0D47A1;
 	margin-top: 0;
@@ -31,7 +31,7 @@ body {
 	color: #FFAB91;
 }
 
-/*Search Form and Reset Button*/
+/* Search Form and Reset Button */
 #search-term {
 	background-color: #FFAB91;
 	margin-left: 10px;
@@ -48,7 +48,7 @@ body {
 	background-color: #BBDEFB;
 }
 
-/*Series Title*/
+/* Series Title */
 .series-title {
 	text-align: center;
 	font-size: 2em;
@@ -65,7 +65,7 @@ body {
 	margin-top: 0;
 }
 
-/*Series Rating*/
+/* Series Rating */
 .rating {
 	text-align: center;
 	background-color: #00BCD4;
@@ -78,13 +78,13 @@ body {
 	color: #0D47A1;
 }
 .rating .series-rating {
-	font-size: 2em;
+	font-size: 1.75em;
 	font-weight: 700;
 	display: inline-block;
 	margin-top: 15px;
 }
 
-/*Series Plot*/
+/* Series Plot */
 .plot {
 	background-color: #BBDEFB;
 	display: none;
@@ -110,7 +110,7 @@ body {
 	margin-bottom: 2em;
 }
 
-/*Search Results */
+/* Search Results */
 #search-results {
 	width: 100%;
 	display: none;
@@ -145,3 +145,43 @@ body {
 #star-small {
 	font-size: 5px;
 }
+
+/* Media Queries */
+ @media only screen and (max-width: 940px) {
+ 	#tv {
+ 		margin-right: 25px;
+ 	}
+ }
+
+ @media only screen and (max-width: 850px) {
+ 	#tv {
+ 		font-size: 1em;
+ 	}
+ 	.rating, .series-title, .plot {
+ 		width: 60%;
+ 	}
+ 	#search-results .seasons {
+ 		width: 40%;
+ 	}
+ }
+  @media only screen and (max-width: 550px) {
+ 	.series-title {
+ 		font-size: 2em;
+ 	}
+ 	.season-title {
+ 		font-size: 15px;
+ 	}
+ 	.episode-title {
+ 		font-size: 12px;
+ 	}
+
+ } @media only screen and (max-width: 500px) {
+ 	#search-results .seasons {
+ 		width: 60%;
+ 		float: none;
+ 		margin: 2em auto;
+ 	}
+ 	.plot .series-plot {
+ 		font-size: 15px;
+ 	}
+ }
