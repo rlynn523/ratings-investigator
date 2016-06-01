@@ -76,6 +76,7 @@ body {
 	width: 24px;
 	height: 24px;
 	color: #0D47A1;
+	vertical-align: middle;
 }
 .rating .series-rating {
 	font-size: 1.75em;
@@ -147,13 +148,13 @@ body {
 }
 
 /* Media Queries */
- @media only screen and (max-width: 940px) {
+@media only screen and (max-width: 940px) {
  	#tv {
  		margin-right: 25px;
  	}
- }
+}
 
- @media only screen and (max-width: 850px) {
+@media only screen and (max-width: 850px) {
  	#tv {
  		font-size: 1em;
  	}
@@ -163,25 +164,35 @@ body {
  	#search-results .seasons {
  		width: 40%;
  	}
- }
-  @media only screen and (max-width: 550px) {
+}
+
+@media only screen and (max-width: 550px) {
  	.series-title {
  		font-size: 2em;
  	}
- 	.season-title {
- 		font-size: 15px;
- 	}
- 	.episode-title {
- 		font-size: 12px;
- 	}
 
- } @media only screen and (max-width: 500px) {
+} 
+
+@media only screen and (max-width: 500px) {
+ 	.rating, .series-title, .plot {
+ 		width: 75%;
+ 	}
+ 	.rating .series-rating {
+ 		font-size: 1.5em;
+ 	}
  	#search-results .seasons {
- 		width: 60%;
+ 		width: 75%;
  		float: none;
  		margin: 2em auto;
  	}
  	.plot .series-plot {
  		font-size: 15px;
  	}
- }
+ 	.app-title p {
+ 		font-size: 3em;
+ 	}
+}
+@media only screen and (max-width: 350px) {
+#search-term, #search, #reset {
+	font-size: 10px;
+}
