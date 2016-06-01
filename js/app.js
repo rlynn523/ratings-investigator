@@ -19,7 +19,6 @@ var getRequest = function (searchTerm) {
   // div is display: none in css, when user clicks submit, the div will show
   		params = {
 		    t: searchTerm,
-		    // in order to get the series plot and the overall series rating, this needs to be taken out
 		    r: 'json'
 	    }; 
 
@@ -50,8 +49,6 @@ var getRequest = function (searchTerm) {
 		    // cloning the season-content div and storing in variable
 		    seasonContent.find(".season-title").text("Season " + data.Season);
 		    // this shows the correct season number
-		    // sometimes the order is not correct, ask Mario
-		    console.log(data);
 		    var episode 
 		    for (var i = 0; i < data.Episodes.length; i++) {
 		        episode = data.Episodes[i]; 
@@ -66,9 +63,9 @@ var getRequest = function (searchTerm) {
 
 	     $("#search-results").append("<div class ='seasons'>" + seasonContent.html() + "</div>");
 	      // all the data, the final commit
+	      // seasons append to separate div classes
 	    });
 	    
 	    seasonNum++;
-	    // I want to have each div contain one separate "season" object
   	}
 }

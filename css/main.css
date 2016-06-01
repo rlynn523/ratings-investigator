@@ -8,6 +8,8 @@ body {
 	font-family: 'Raleway', sans-serif;
 	background-color: #1E88E5;
 }
+
+/*Masthead Styling*/
 .app-title {
 	background-color: #0D47A1;
 	margin-top: 0;
@@ -20,37 +22,7 @@ body {
 	color: #FFFFFF;
 }
 .title {
-	opacity: 0.8;
-	word-wrap: break-word;
 	display: none;
-}
-#search-term {
-	background-color: #FFAB91;
-}
-#search {
-	text-align: center;
-	padding: 4em 0;
-}
-.series-title {
-	text-align: center;
-	font-size: 2em;
-	background-color: #00BCD4;
-	width: 33%;
-	margin: 0 auto;
-	padding-top: 32px;
-	font-size: 2.5em;
-	font-weight: 800;
-	margin-bottom: 0;
-}
-.series-title p {
-	margin-bottom: 0;
-	margin-top: 0;
-}
-.rating {
-	text-align: center;
-	background-color: #00BCD4;
-	width: 33%;
-	margin: 0 auto;
 }
 #tv {
 	font-size: 1.15em;
@@ -58,46 +30,55 @@ body {
 	vertical-align: middle;
 	color: #FFAB91;
 }
+
+/*Search Form*/
+#search-term {
+	background-color: #FFAB91;
+}
+#search {
+	text-align: center;
+	padding: 4em 0;
+}
+
+/*Series Title*/
+.series-title {
+	text-align: center;
+	font-size: 2em;
+	background-color: #00BCD4;
+	width: 33%;
+	margin: 0 auto;
+	padding-top: 32px;
+	font-size: 2.25em;
+	font-weight: 800;
+	margin-bottom: 0;
+}
+.series-title p {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+/*Series Rating*/
+.rating {
+	text-align: center;
+	background-color: #00BCD4;
+	width: 33%;
+	margin: 0 auto;
+}
 #star-rate {
 	width: 24px;
 	height: 24px;
 	color: #0D47A1;
 }
-
 .rating .series-rating {
 	font-size: 2em;
 	font-weight: 700;
 	display: inline-block;
-	margin-top: 0;
+	margin-top: 15px;
 }
-.series-plot {
-	text-align: center;
-	font-size: 1.5em;
-}
-.series-plot p {
-	margin-top: 10px;
-	margin-bottom: 2em;
-}
-#search-results {
-	width: 100%;
-	display: none;
-}
-#search-results .seasons {
-	float: left;
-	background-color: #FFFFFF;
-	word-wrap: break-word;
-	overflow-y: scroll;
-	height: 300px;
-	width: 23.33%;
-	margin: 2em 5%;
-}
-#search-results .seasons:hover {
-	background-color: #BBDEFB;
-	transition: ease 700ms;
-}
+
+/*Series Plot*/
 .plot {
 	background-color: #BBDEFB;
-	word-wrap: break-word;
 	display: none;
 	font-style: italic;
 	font-size: 12px;
@@ -109,27 +90,50 @@ body {
 .plot .series-plot {
 	margin-top: 0;
 	margin-bottom: 4em;
-	margin-left: auto;
-	margin-right: auto;
 	padding-bottom: 30px;
+	padding-left: 10px;
+    padding-right: 10px;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: 600;
+}
+.series-plot p {
+	margin-top: 10px;
+	margin-bottom: 2em;
 }
 
+/*Search Results */
+#search-results {
+	width: 100%;
+	display: none;
+}
+#search-results .seasons {
+	float: left;
+	background-color: #FFFFFF;
+	overflow-y: scroll;
+	height: 300px;
+	width: 23.33%;
+	margin: 2em 5%;
+}
+#search-results .seasons:hover {
+	background-color: #BBDEFB;
+	transition: ease 700ms;
+}
 .season-title {
 	font-weight: bold;
 	text-align: center;
 	background-color: #00BCD4;
 	margin: 0 auto;
 	padding: 15px 0;
+	font-size: 20px;
 }
 .season-content {
 	display: none;
 }
 .episode-title {
-	padding-left: 10px;
+	font-weight: 600;
+	padding: 0 10px;
 }
-.unsplash p {
-	margin-right: 10px;
-	position: fixed;
-    right: 0;
-    bottom: 0;
+#star-small {
+	font-size: 5px;
 }
