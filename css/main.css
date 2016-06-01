@@ -29,11 +29,18 @@ body {
 }
 #search {
 	text-align: center;
-	padding: 2em 0;
+	padding: 4em 0;
 }
 .series-title {
 	text-align: center;
 	font-size: 2em;
+	background-color: #00BCD4;
+	width: 33%;
+	margin: 0 auto;
+	padding-top: 32px;
+	font-size: 2.5em;
+	font-weight: 800;
+	margin-bottom: 0;
 }
 .series-title p {
 	margin-bottom: 0;
@@ -41,14 +48,27 @@ body {
 }
 .rating {
 	text-align: center;
+	background-color: #00BCD4;
+	width: 33%;
+	margin: 0 auto;
 }
-.material-icons {
+#tv {
+	font-size: 1.15em;
+	margin-right: 50px;
+	vertical-align: middle;
+	color: #FFAB91;
+}
+#star-rate {
 	width: 24px;
+	height: 24px;
+	color: #0D47A1;
 }
+
 .rating .series-rating {
 	font-size: 2em;
 	font-weight: 700;
 	display: inline-block;
+	margin-top: 0;
 }
 .series-plot {
 	text-align: center;
@@ -72,33 +92,37 @@ body {
 	margin: 2em 5%;
 }
 #search-results .seasons:hover {
-	background-color: #CFD8DC;
+	background-color: #BBDEFB;
 	transition: ease 700ms;
 }
 .plot {
-	border: 1px solid black;
-	opacity: 0.8;
+	background-color: #BBDEFB;
 	word-wrap: break-word;
 	display: none;
-	margin-top: 0;
 	font-style: italic;
 	font-size: 12px;
 	padding: 0 10px;
+	padding-top: 30px;
+	width: 33%;
+	margin: 0 auto;
 }
-.title .series-title {
-	font-size: 2.5em;
-	font-weight: 800;
-	margin-bottom: 0;
+.plot .series-plot {
+	margin-top: 0;
+	margin-bottom: 4em;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 30px;
 }
+
 .season-title {
 	font-weight: bold;
 	text-align: center;
-	background-color: #BBDEFB;
+	background-color: #00BCD4;
 	margin: 0 auto;
 	padding: 15px 0;
 }
-.season-title p {
-	text-align: center;
+.season-content {
+	display: none;
 }
 .episode-title {
 	padding-left: 10px;
