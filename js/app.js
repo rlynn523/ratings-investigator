@@ -3,7 +3,11 @@ $(function(){
   $("#search").submit(function(event){
     event.preventDefault();
     var searchTerm = $("#query").val();
-    getRequest(searchTerm);
+    if(searchTerm === "") {
+    	alert("Please investigate a series!");
+    } else {
+    	getRequest(searchTerm);
+    }
   })
   function resetSearch() {
   	$("#query").val("");
