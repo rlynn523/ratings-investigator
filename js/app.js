@@ -1,14 +1,22 @@
-var hasData = true;
+
 $(function(){
   $("#search").submit(function(event){
     event.preventDefault();
     var searchTerm = $("#query").val();
     getRequest(searchTerm);
+  })
+  function resetSearch() {
   	$("#query").val("");
-  });
+  	$(".title").hide();
+  	$(".plot").hide();
+  	$(".seasons").remove();
+  }
+  $("#reset").click(function(){
+  	resetSearch();
+  })
 });
-  
 var getRequest = function (searchTerm) {
+	var hasData = true;
     var params; 
     var url = 'http://www.omdbapi.com/?';
     var seasonNum = 1;
@@ -25,13 +33,14 @@ var getRequest = function (searchTerm) {
 	    $.getJSON(url, params, function (data) {
 	  		$(".series-rating").text("Series Rating: " + data.imdbRating); 
 	  		$(".series-plot").text(data.Plot); 	
+	  		$(".title").find(".series-title").text(data.Title);
+		      // places the text of the show title to the page
 	   	})
   	while(hasData && seasonNum < maxSeason){
   	// run the while loop until we reach maxSeason, or we have data
 	    params = {
 		    t: searchTerm,
 		    Season: seasonNum,
-		    // in order to get the series plot and the overall series rating, this needs to be taken out
 		    r: 'json'
 	    }; 
 
@@ -41,9 +50,6 @@ var getRequest = function (searchTerm) {
 	      	hasData = false
 	      	return;
 	    	}
-
-		    $(".title").find(".series-title").text(data.Title);
-		      // places the text of the show title to the page
 		    // $(".plot").find(".series-plot").text(data.Plot);
 	    	var seasonContent = $(".season-content").clone();
 		    // cloning the season-content div and storing in variable

@@ -31,13 +31,21 @@ body {
 	color: #FFAB91;
 }
 
-/*Search Form*/
+/*Search Form and Reset Button*/
 #search-term {
 	background-color: #FFAB91;
+	margin-left: 10px;
 }
 #search {
 	text-align: center;
 	padding: 4em 0;
+}
+#reset {
+	background-color: #FFAB91;
+	margin-left: 10px;
+}
+#search-term:hover, #reset:hover {
+	background-color: #BBDEFB;
 }
 
 /*Series Title*/
