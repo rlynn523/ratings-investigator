@@ -64,10 +64,9 @@ body {
 }
 #search-results .seasons {
 	float: left;
-	background-color: #9E9E9E;
-	opacity: 0.8;
+	background-color: #FFFFFF;
 	word-wrap: break-word;
-	overflow: scroll;
+	overflow-y: scroll;
 	height: 300px;
 	width: 23.33%;
 	margin: 2em 5%;
@@ -94,6 +93,9 @@ body {
 .season-title {
 	font-weight: bold;
 	text-align: center;
+	background-color: #BBDEFB;
+	margin: 0 auto;
+	padding: 15px 0;
 }
 .season-title p {
 	text-align: center;
