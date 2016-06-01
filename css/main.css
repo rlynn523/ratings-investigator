@@ -24,6 +24,9 @@ body {
 	word-wrap: break-word;
 	display: none;
 }
+#search-term {
+	background-color: #FFAB91;
+}
 #search {
 	text-align: center;
 	padding: 2em 0;
