@@ -35,10 +35,19 @@ var getRequest = function (searchTerm) {
 	    }; 
 
 	    $.getJSON(url, params, function (data) {
-	  		$(".series-rating").text("Series Rating: " + data.imdbRating); 
-	  		$(".series-plot").text(data.Plot); 	
-	  		$(".title").find(".series-title").text(data.Title);
-		      // places the text of the show title to the page
+	    	console.log(data);
+		    if (data.imdbRating === undefined) {
+		    	$("#star-rate").hide();
+		    	$(".plot").hide();
+		    	$(".series-title").hide();
+    			$(".series-rating").text("Series Not Found!");
+   			} else {
+   				$(".series-title").show();
+   				$(".series-rating").text("Series Rating: " + data.imdbRating); 
+	  			$(".series-plot").text(data.Plot); 	
+	  			$(".title").find(".series-title").text(data.Title);
+		      	// places the text of the show title to the page
+   			}
 	   	})
   	while(hasData && seasonNum < maxSeason){
   	// run the while loop until we reach maxSeason, or we have data
@@ -57,7 +66,10 @@ var getRequest = function (searchTerm) {
 		    // $(".plot").find(".series-plot").text(data.Plot);
 	    	var seasonContent = $(".season-content").clone();
 		    // cloning the season-content div and storing in variable
-		    seasonContent.find(".season-title").text("Season " + data.Season);
+		    var seasonNumber = parseInt(data.Season);
+		    var seasonArray = [seasonNumber];
+		    console.log(seasonArray.sort());
+		    seasonContent.find(".season-title").text("Season " + seasonArray.sort());
 		    // this shows the correct season number
 		    var episode 
 		    for (var i = 0; i < data.Episodes.length; i++) {
@@ -71,11 +83,10 @@ var getRequest = function (searchTerm) {
 		      	// when you use .html(), you return only a string value
 				} 
 
-	     $("#search-results").append("<div class ='seasons'>" + seasonContent.html() + "</div>");
-	      // all the data, the final commit
-	      // seasons append to separate div classes
+	    $("#search-results").append("<div class ='seasons'>" + seasonContent.html() + "</div>");
+	    // all the data, the final commit
+	    // seasons append to separate div classes
 	    });
-	    
 	    seasonNum++;
   	}
 }
