@@ -55,8 +55,7 @@ var getRequest = function (searchTerm) {
 		    t: searchTerm,
 		    Season: seasonNum,
 		    r: 'json'
-	    }; 
-
+	    };
 	    $.getJSON(url, params, function (data) {
 	    	if(data.Response == "False"){
 	      	// if data is null, then hasData will equal false, thus stopping the while loop.
@@ -66,10 +65,7 @@ var getRequest = function (searchTerm) {
 		    // $(".plot").find(".series-plot").text(data.Plot);
 	    	var seasonContent = $(".season-content").clone();
 		    // cloning the season-content div and storing in variable
-		    var seasonNumber = parseInt(data.Season);
-		    var seasonArray = [seasonNumber];
-		    console.log(seasonArray.sort());
-		    seasonContent.find(".season-title").text("Season " + seasonArray.sort());
+		    seasonContent.find(".season-title").text("Season " + data.Season);
 		    // this shows the correct season number
 		    var episode 
 		    for (var i = 0; i < data.Episodes.length; i++) {
@@ -82,7 +78,6 @@ var getRequest = function (searchTerm) {
 		      	seasonContent.append(episodeContent.html());
 		      	// when you use .html(), you return only a string value
 				} 
-
 	    $("#search-results").append("<div class ='seasons'>" + seasonContent.html() + "</div>");
 	    // all the data, the final commit
 	    // seasons append to separate div classes
