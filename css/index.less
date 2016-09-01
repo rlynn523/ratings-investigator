@@ -1,25 +1,33 @@
+@import "normalize.css";
 html {
   	box-sizing: border-box;
 }
 *, *:before, *:after {
  	box-sizing: inherit;
 }
+@white: #FFFFFF;
+@dark-blue: #0D47A1;
+@blue: #1E88E5;
+@light-blue: #BBDEFB;
+@blue-gray: #00BCD4;
+@orange: #FFAB91;
+
 body {
 	font-family: 'Raleway', sans-serif;
-	background-color: #1E88E5;
+	background-color: @blue;
 }
 
 /* Masthead Styling */
 .app-title {
-	background-color: #0D47A1;
+	background-color: @dark-blue;
 	margin-top: 0;
 	padding: 1px 0;
-}
-.app-title p {
-	text-align: center;
-	font-family: 'Megrim', cursive;
-	font-size: 4em;
-	color: #FFFFFF;
+	p {
+		text-align: center;
+		font-family: 'Megrim', cursive;
+		font-size: 4em;
+		color: @white;
+	}
 }
 .title {
 	display: none;
@@ -28,66 +36,68 @@ body {
 	font-size: 1.15em;
 	margin-right: 50px;
 	vertical-align: middle;
-	color: #FFAB91;
+	color: @orange;
 }
 
 /* Search Form and Reset Button */
 #search-term {
-	background-color: #FFAB91;
+	background-color: @orange;
 	margin-left: 10px;
+	&:hover {
+		background-color: @light-blue;
+	}
 }
 #search {
 	text-align: center;
 	padding: 4em 0;
 }
 #reset {
-	background-color: #FFAB91;
+	background-color: @orange;
 	margin-left: 10px;
-}
-#search-term:hover, #reset:hover {
-	background-color: #BBDEFB;
+	&:hover {
+		background-color: @light-blue;
+	}
 }
 
 /* Series Title */
 .series-title {
 	text-align: center;
 	font-size: 2em;
-	background-color: #00BCD4;
+	background-color: @blue-gray;
 	width: 33%;
 	margin: 0 auto;
 	padding-top: 32px;
 	font-size: 2.25em;
 	font-weight: 800;
 	margin-bottom: 0;
+	p {
+		margin-bottom: 0;
+		margin-top: 0;
+	}
 }
-.series-title p {
-	margin-bottom: 0;
-	margin-top: 0;
-}
-
 /* Series Rating */
 .rating {
 	text-align: center;
-	background-color: #00BCD4;
+	background-color: @blue-gray;
 	width: 33%;
 	margin: 0 auto;
+	.series-rating {
+		font-size: 1.75em;
+		font-weight: 700;
+		display: inline-block;
+		margin-top: 15px;
+	}
 }
 #star-rate {
 	width: 24px;
 	height: 24px;
-	color: #0D47A1;
+	color: @dark-blue;
 	vertical-align: middle;
-}
-.rating .series-rating {
-	font-size: 1.75em;
-	font-weight: 700;
-	display: inline-block;
-	margin-top: 15px;
 }
 
 /* Series Plot */
 .plot {
-	background-color: #BBDEFB;
+	background-color: @light-blue;
 	display: none;
 	font-style: italic;
 	font-size: 12px;
@@ -95,43 +105,43 @@ body {
 	padding-top: 30px;
 	width: 33%;
 	margin: 0 auto;
-}
-.plot .series-plot {
-	margin-top: 0;
-	margin-bottom: 4em;
-	padding-bottom: 30px;
-	padding-left: 10px;
-    padding-right: 10px;
-	text-align: center;
-	font-size: 1.5em;
-	font-weight: 600;
-}
-.series-plot p {
-	margin-top: 10px;
-	margin-bottom: 2em;
+	.series-plot {
+		margin-top: 0;
+		margin-bottom: 4em;
+		padding-bottom: 30px;
+		padding-left: 10px;
+	    padding-right: 10px;
+		text-align: center;
+		font-size: 1.5em;
+		font-weight: 600;
+		p {
+			margin-top: 10px;
+			margin-bottom: 2em;
+		}
+	}
 }
 
 /* Search Results */
 #search-results {
 	width: 100%;
 	display: none;
-}
-#search-results .seasons {
-	float: left;
-	background-color: #FFFFFF;
-	overflow-y: scroll;
-	height: 300px;
-	width: 23.33%;
-	margin: 2em 5%;
-}
-#search-results .seasons:hover {
-	background-color: #BBDEFB;
-	transition: ease 700ms;
+	.seasons {
+		float: left;
+		background-color: @white;
+		overflow-y: scroll;
+		height: 300px;
+		width: 23.33%;
+		margin: 2em 5%;
+		&:hover{
+			background-color: @light-blue;
+			transition: ease 700ms;
+		}
+	} 
 }
 .season-title {
 	font-weight: bold;
 	text-align: center;
-	background-color: #00BCD4;
+	background-color: @blue-gray;
 	margin: 0 auto;
 	padding: 15px 0;
 	font-size: 20px;
@@ -193,6 +203,7 @@ body {
  	}
 }
 @media only screen and (max-width: 350px) {
-#search-term, #search, #reset {
-	font-size: 10px;
+	#search-term, #search, #reset {
+		font-size: 10px;
+	}
 }
