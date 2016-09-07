@@ -56,9 +56,9 @@
 	            getRequest(searchTerm);
 	            $('#query').val('');
 	        }
-	        refreshSearch();
+	        newSearch();
 	    });
-	    function refreshSearch() {
+	    function newSearch() {
 	        $('#query').val('');
 	        $('.seasons').remove();
 	    }
