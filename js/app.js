@@ -6,9 +6,14 @@ $(function() {
             alert('Please investigate a series!');
         } else {
             getRequest(searchTerm);
+            $('#query').val('');
         }
+        refreshSearch();
     });
-
+    function refreshSearch() {
+        $('#query').val('');
+        $('.seasons').remove();
+    }
     function resetSearch() {
         $('#query').val('');
         $('.title').hide();
@@ -50,7 +55,6 @@ var getRequest = function(searchTerm) {
     });
     let seasonResponse = 0;
     let seasonObject = {};
-    let orderSeasons;
     while (hasData && seasonNum < maxSeason) {
         // run the while loop until we reach maxSeason, or we have data
         params = {
