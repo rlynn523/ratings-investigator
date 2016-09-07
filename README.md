@@ -20,11 +20,16 @@ User can search for any television series.
 
 Once the user has searched for a series, a div will appear containg the following: 
 <li>Name of the series</li>
-  <li>HTML</li>
-
+<li>Overall series rating</li>
+<li>A brief synopsis of the series</li>
 
 <img src='https://github.com/rlynn523/ratings-investigator/blob/master/images/divs.png?raw=true' width='500'>
 <img src='https://github.com/rlynn523/ratings-investigator/blob/master/images/mobile-div.png?raw=true' height='400'>
+
+Under the main series div, there will be multiple divs appended to the page. The number of divs is equal to the number of seasons the show currently has or had during its run. Each of the divs contain the following information: 
+<li>The season number</li>
+<li>A list of all episodes for that particular season</li>
+<li>Each episode has an episode number, title, and episode rating </li>
 
 ##Tech Used
 <ul>
@@ -38,3 +43,5 @@ Once the user has searched for a series, a div will appear containg the followin
   <li>LESS</li>
 </ul>
 ##What Does The Future Hold?
+One feature I plan to implement in the near future is having the "season" divs appear as accordian-style containers, so the user can toggle each season to show the episodes. 
+Another feature I plan to implemenet is allowing the user to click an episode and have a brief episode summary appear. 
