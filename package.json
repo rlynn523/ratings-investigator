@@ -5,7 +5,7 @@
   "main": "js/app.js",
   "scripts": {
     "start":"http-server",
-    "all": "git add -A",
+    "add": "git add -A",
     "mkdir": "mkdir -p build",
     "build": "npm run clean && npm run mkdir && npm run build:html && npm run build:css && npm run build:js",
     "watch": "npm run watch:html & npm run watch:css & npm run watch:js",
