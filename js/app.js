@@ -6,7 +6,6 @@ $(function() {
             alert('Please investigate a series!');
         } else {
             getRequest(searchTerm);
-            $('#query').val('');
         }
         newSearch();
     });
