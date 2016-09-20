@@ -19,9 +19,7 @@ $(function() {
         $('.plot').hide();
         $('.seasons').remove();
     }
-    $('#reset').click(function() {
-        resetSearch();
-    });
+    $('#reset').click(resetSearch);
 });
 var getRequest = function(searchTerm) {
     let hasData = true;
