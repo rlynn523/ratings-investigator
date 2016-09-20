@@ -11,6 +11,7 @@ html {
 @light-blue: #BBDEFB;
 @blue-gray: #00BCD4;
 @orange: #FFAB91;
+@black: #000000;
 
 body {
 	font-family: 'Raleway', sans-serif;
@@ -40,11 +41,17 @@ body {
 }
 
 /* Search Form and Reset Button */
+#query {
+    color: @white;
+    width: 25%;
+    font-size: 2em;
+}
 #search-term {
 	background-color: @orange;
 	margin-left: 10px;
 	&:hover {
 		background-color: @light-blue;
+        color: @black
 	}
 }
 #search {
@@ -56,6 +63,7 @@ body {
 	margin-left: 10px;
 	&:hover {
 		background-color: @light-blue;
+        color: @black
 	}
 }
 
@@ -136,7 +144,7 @@ body {
 			background-color: @light-blue;
 			transition: ease 700ms;
 		}
-	} 
+	}
 }
 .season-title {
 	font-weight: bold;
@@ -162,6 +170,9 @@ body {
  	#tv {
  		margin-right: 25px;
  	}
+    #query {
+        font-size: 1.5em;
+    }
 }
 
 @media only screen and (max-width: 850px) {
@@ -174,14 +185,20 @@ body {
  	#search-results .seasons {
  		width: 40%;
  	}
+    #query {
+        font-size: 1.25em;
+    }
 }
 
 @media only screen and (max-width: 550px) {
  	.series-title {
  		font-size: 2em;
  	}
+    #query {
+        font-size: 1em;
+    }
 
-} 
+}
 
 @media only screen and (max-width: 500px) {
  	.rating, .series-title, .plot {
@@ -201,9 +218,15 @@ body {
  	.app-title p {
  		font-size: 3em;
  	}
+    #query {
+        font-size: 0.75em;
+    }
 }
 @media only screen and (max-width: 350px) {
 	#search-term, #search, #reset {
 		font-size: 10px;
 	}
+    #query {
+        font-size: 0.5em;
+    }
 }
