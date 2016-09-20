@@ -5,22 +5,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Ratings Investigator</title>
 	<link rel="shortcut icon" href="images/tv.png">
-	<link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700,800" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700,800|Megrim" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
 	<link rel="stylesheet" href="ratings-investigator.1.0.0.css">
-	<script src="http://code.jquery.com/jquery.min.js"></script>
-	<script src="ratings-investigator.1.0.0.js"></script>
 </head>
 <body>
 	<div class="app-title">
 		<p><i class="material-icons" id="tv">tv</i><strong>TV Ratings Investigator</strong></p>
 	</div>
 	<form id="search">
-		<input type="text" id="query" placeholder="Search a TV Series..." />
-		<input type="submit" id="search-term"/>
-		<button type="button" id="reset">Reset</button>
+		<input type="text" id="query" placeholder="Search a TV Series" />
+		<button class="btn waves-effect waves-light" type="submit" id="search-term">Submit</button>
+		<a class="waves-effect waves-light btn" id="reset">Reset</a>
 	</form>
 	<div class="title">
 		<p class="series-title"></p>
@@ -39,5 +37,8 @@
 			</div>
 		</div>
 	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+	<script src="ratings-investigator.1.0.0.js"></script>
 </body>
 </html>
