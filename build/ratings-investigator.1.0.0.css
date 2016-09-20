@@ -37,6 +37,7 @@ body {
   color: #FFFFFF;
   width: 25%;
   font-size: 2em;
+  text-align: center;
 }
 #search-term {
   background-color: #FFAB91;
@@ -154,12 +155,14 @@ body {
   font-size: 5px;
 }
 /* Media Queries */
+@media only screen and (max-width: 960px) {
+  #query {
+    font-size: 1.5em;
+  }
+}
 @media only screen and (max-width: 940px) {
   #tv {
     margin-right: 25px;
-  }
-  #query {
-    font-size: 1.5em;
   }
 }
 @media only screen and (max-width: 850px) {
@@ -174,8 +177,15 @@ body {
   #search-results .seasons {
     width: 40%;
   }
+}
+@media only screen and (max-width: 780px) {
   #query {
     font-size: 1.25em;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #query {
+    font-size: 1.15em;
   }
 }
 @media only screen and (max-width: 550px) {
@@ -184,6 +194,7 @@ body {
   }
   #query {
     font-size: 1em;
+    width: 50%;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -207,7 +218,8 @@ body {
     font-size: 3em;
   }
   #query {
-    font-size: 0.75em;
+    font-size: 2.5em;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 350px) {
@@ -217,7 +229,7 @@ body {
     font-size: 10px;
   }
   #query {
-    font-size: 0.5em;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=ratings-investigator.1.0.0.css.map */
