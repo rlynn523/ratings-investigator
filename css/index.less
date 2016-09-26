@@ -1,9 +1,9 @@
 @import "normalize.css";
 html {
-  	box-sizing: border-box;
+    box-sizing: border-box;
 }
 *, *:before, *:after {
- 	box-sizing: inherit;
+    box-sizing: inherit;
 }
 @white: #FFFFFF;
 @dark-blue: #0D47A1;
@@ -20,24 +20,24 @@ body {
 
 /* Masthead Styling */
 .app-title {
-	background-color: @dark-blue;
-	margin-top: 0;
-	padding: 1px 0;
-	p {
-		text-align: center;
-		font-family: 'Megrim', cursive;
-		font-size: 4em;
-		color: @white;
-	}
+    background-color: @dark-blue;
+    margin-top: 0;
+    padding: 1px 0;
+    p {
+        text-align: center;
+        font-family: 'Megrim', cursive;
+        font-size: 4em;
+        color: @white;
+    }
 }
 .title {
 	display: none;
 }
 #tv {
-	font-size: 1.15em;
-	margin-right: 50px;
-	vertical-align: middle;
-	color: @orange;
+    font-size: 1.15em;
+    margin-right: 50px;
+    vertical-align: middle;
+    color: @orange;
 }
 
 /* Search Form and Reset Button */
@@ -48,41 +48,41 @@ body {
     text-align: center;
 }
 #search-term {
-	background-color: @orange;
-	margin-left: 10px;
-	&:hover {
-		background-color: @light-blue;
+    background-color: @orange;
+    margin-left: 10px;
+    &:hover {
+        background-color: @light-blue;
         color: @black
-	}
+    }
 }
 #search {
 	text-align: center;
 	padding: 4em 0;
 }
 #reset {
-	background-color: @orange;
-	margin-left: 10px;
-	&:hover {
-		background-color: @light-blue;
+    background-color: @orange;
+    margin-left: 10px;
+    &:hover {
+        background-color: @light-blue;
         color: @black
-	}
+    }
 }
 
 /* Series Title */
 .series-title {
-	text-align: center;
-	font-size: 2em;
-	background-color: @blue-gray;
-	width: 33%;
-	margin: 0 auto;
-	padding-top: 32px;
-	font-size: 2.25em;
-	font-weight: 800;
-	margin-bottom: 0;
-	p {
-		margin-bottom: 0;
-		margin-top: 0;
-	}
+    text-align: center;
+    font-size: 2em;
+    background-color: @blue-gray;
+    width: 33%;
+    margin: 0 auto;
+    padding-top: 32px;
+    font-size: 2.25em;
+    font-weight: 800;
+    margin-bottom: 0;
+    p {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
 }
 /* Series Rating */
 .rating {
@@ -115,19 +115,19 @@ body {
 	width: 33%;
 	margin: 0 auto;
 	.series-plot {
-		margin-top: 0;
-		margin-bottom: 4em;
-		padding-bottom: 30px;
-		padding-left: 10px;
-	    padding-right: 10px;
-		text-align: center;
-		font-size: 1.5em;
-		font-weight: 600;
-		p {
-			margin-top: 10px;
-			margin-bottom: 2em;
-		}
-	}
+        margin-top: 0;
+        margin-bottom: 4em;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: 600;
+        p {
+            margin-top: 10px;
+            margin-bottom: 2em;
+        }
+    }
 }
 
 /* Search Results */
@@ -141,7 +141,7 @@ body {
 		height: 300px;
 		width: 23.33%;
 		margin: 2em 5%;
-		&:hover{
+		&:hover {
 			background-color: @light-blue;
 			transition: ease 700ms;
 		}
@@ -173,21 +173,21 @@ body {
     }
 }
 @media only screen and (max-width: 940px) {
- 	#tv {
- 		margin-right: 25px;
- 	}
+    #tv {
+        margin-right: 25px;
+    }
 }
 
 @media only screen and (max-width: 850px) {
- 	#tv {
- 		font-size: 1em;
- 	}
- 	.rating, .series-title, .plot {
- 		width: 60%;
- 	}
- 	#search-results .seasons {
- 		width: 40%;
- 	}
+    #tv {
+        font-size: 1em;
+    }
+    .rating, .series-title, .plot {
+        width: 60%;
+    }
+    #search-results .seasons {
+        width: 40%;
+    }
 }
 @media only screen and (max-width: 780px) {
     #query {
@@ -200,43 +200,42 @@ body {
     }
 }
 @media only screen and (max-width: 550px) {
- 	.series-title {
- 		font-size: 2em;
- 	}
+    .series-title {
+        font-size: 2em;
+    }
     #query {
         font-size: 1em;
         width: 50%
     }
-
 }
 
 @media only screen and (max-width: 500px) {
- 	.rating, .series-title, .plot {
- 		width: 75%;
- 	}
- 	.rating .series-rating {
- 		font-size: 1.5em;
- 	}
- 	#search-results .seasons {
- 		width: 75%;
- 		float: none;
- 		margin: 2em auto;
- 	}
- 	.plot .series-plot {
- 		font-size: 15px;
- 	}
- 	.app-title p {
- 		font-size: 3em;
- 	}
+    .rating, .series-title, .plot {
+        width: 75%;
+    }
+    .rating .series-rating {
+        font-size: 1.5em;
+    }
+    #search-results .seasons {
+        width: 75%;
+        float: none;
+        margin: 2em auto;
+    }
+    .plot .series-plot {
+        font-size: 15px;
+    }
+    .app-title p {
+        font-size: 3em;
+    }
     #query {
         font-size: 2.5em;
         width: 100%
     }
 }
 @media only screen and (max-width: 350px) {
-	#search-term, #search, #reset {
-		font-size: 10px;
-	}
+    #search-term, #search, #reset {
+        font-size: 10px;
+    }
     #query {
         width: 100%
     }
