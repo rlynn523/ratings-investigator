@@ -54,7 +54,6 @@
 	            alert('Please investigate a series!');
 	        } else {
 	            getRequest(searchTerm);
-	            $('#query').val('');
 	        }
 	        newSearch();
 	    });
@@ -68,9 +67,7 @@
 	        $('.plot').hide();
 	        $('.seasons').remove();
 	    }
-	    $('#reset').click(function () {
-	        resetSearch();
-	    });
+	    $('#reset').click(resetSearch);
 	});
 	var getRequest = function getRequest(searchTerm) {
 	    var hasData = true;
