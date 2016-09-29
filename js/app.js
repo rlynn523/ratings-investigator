@@ -1,12 +1,11 @@
 $(function() {
     $('#search').submit(function(event) {
         event.preventDefault();
-        var searchTerm = $('#query').val();
+        var searchTerm = $('#query').val().trim();
         if (searchTerm === '') {
             alert('Please investigate a series!');
         } else {
             getRequest(searchTerm);
-            $('#query').val('');
         }
         newSearch();
     });
@@ -20,9 +19,7 @@ $(function() {
         $('.plot').hide();
         $('.seasons').remove();
     }
-    $('#reset').click(function() {
-        resetSearch();
-    });
+    $('#reset').click(resetSearch);
 });
 var getRequest = function(searchTerm) {
     let hasData = true;
