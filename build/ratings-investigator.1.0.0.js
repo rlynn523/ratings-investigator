@@ -49,7 +49,7 @@
 	$(function () {
 	    $('#search').submit(function (event) {
 	        event.preventDefault();
-	        var searchTerm = $('#query').val();
+	        var searchTerm = $('#query').val().trim();
 	        if (searchTerm === '') {
 	            alert('Please investigate a series!');
 	        } else {
